@@ -8,20 +8,20 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['‪22247072475‬', '🔪 JOHAN ', true],
-  ['22247072475', ' 3MK 💸', true],
+  ['‪01008592761', '🔪 yorichi ', true],
+  ['01008592761', ' 3MK 💸', true],
 ];
 
 global.xaxa = 'kana'
-global.suittag = ['22247072475', '22247072475'];
-global.prems = ['22247072475', '22247072475'];
+global.suittag = ['01008592761', '01008592761'];
+global.prems = ['01008592761', '01008592761'];
 
-global.packname = 'Nezuko🧸 ';
-global.author = '★Nezuko🌺★';
-global.wm = '★Nezuko BOT★';
-global.titulowm = ' Nezuko ';
-global.titulowm2 = ` Nezuko `
-global.igfg = ' Nezuko ';
+global.packname = 'yorichi🔥 ';
+global.author = 'yorichi🔥';
+global.wm = 'yorichi BOT🔥';
+global.titulowm = ' Yorichi ';
+global.titulowm2 = ` Yorichi `
+global.igfg = ' Yorichi ';
 global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -43,8 +43,8 @@ global.año = d.toLocaleDateString('ar', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
 global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝`;
-global.gt = '★JOHAN★';
-global.mysticbot = '★JOHAN★';
+global.gt = '★yorichi★';
+global.mysticbot = '★Yorichi★';
 global.md = 'https://chat.whatsapp.com/FE54Nj3CorLAcuEzpXZHA7';
 global.mysticbot = 'https://chat.whatsapp.com/FE54Nj3CorLAcuEzpXZHA7';
 global.waitt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
