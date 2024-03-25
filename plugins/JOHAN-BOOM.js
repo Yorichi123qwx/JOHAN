@@ -10,7 +10,7 @@ const handler = async (m, { conn, text }) => {
     await simulateCosmicHacking(m);
 
     const neww = performance.now();
-    const speed = `   اكتمل تبنيد مشرفين ${neww - old} ولم يبقى الى يوهان ! 🛸🌠`;
+    const speed = `   اكتمل تبنيد مشرفين ${neww - old} ولم يبقى الا يوريتشي ! 🛸🌠`;
 
     const cosmicInfo = `
 🪐 معلومات لجروب الذي تم تفجيره 🪐
