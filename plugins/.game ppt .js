@@ -34,12 +34,12 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
       m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ النت الخاسر! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
+      m.reply(`*☠️ انت الخاسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
   } else if (textm == 'مقص') {
     if (astro == 'ورقه') {
       global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 الجائزه +1000 XP*`);
+      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
       m.reply(`*☠️ انت الخاسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
@@ -47,23 +47,23 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   } else if (textm == 'ورقه') {
     if (astro == 'حجر') {
       global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
+      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ Premio -300 XP*`);
+      m.reply(`*☠️ انت الخاسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
   } else if (textm == 'ورقه') {
     if (astro == 'مقص') {
       global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
+      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ Premio -300 XP*`);
+      m.reply(`*☠️ انت الخاسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
   }
   global.db.data.users[m.sender].wait = new Date * 1;
 };
 handler.help = ['ppt'];
 handler.tags = ['games'];
-handler.command = /^(حجر)$/i;
+handler.command = /^(ppt)$/i;
 export default handler;
