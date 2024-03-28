@@ -6,7 +6,7 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   const time = global.db.data.users[m.sender].wait + 10000;
   if (new Date - global.db.data.users[m.sender].wait < 10000) throw `*🕓 Tendrás que esperar ${Math.floor((time - new Date()) / 1000)} segundos antes de poder volver a jugar*`;
 
-  if (!args[0]) return conn.reply(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉ 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, m);
+  if (!args[0]) return conn.reply(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉ استخدم هذه الأوامر للعب مع البوت:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, m);
   // conn.sendButton(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉  يمكنك إستخدام هذه الأوامر  :*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, wm, pp, [['حجر 🗿', `${usedPrefix + command} حجر`], ['ورقه 📄', `${usedPrefix + command} ورقه`], ['مقص ✂️', `${usedPrefix + command} مقص`]], m)
   let astro = Math.random();
   if (astro < 0.34) {
@@ -19,41 +19,41 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   const textm = text.toLowerCase();
   if (textm == astro) {
     global.db.data.users[m.sender].exp += 500;
-    m.reply(`*🔰 Empate!*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +500 XP*`);
+    m.reply(`*🔰 تعادل!*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +500 XP*`);
   } else if (text == 'ورقه') {
     if (astro == 'حجر') {
+      global.db.data.users[m.sender].exp += 1000;
+      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
+    } else {
+      global.db.data.users[m.sender].exp -= 300;
+      m.reply(`*☠️انت الخاسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
+    }
+  } else if (text == 'مقص') {
+    if (astro == 'ورقه') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ انت خسرت! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ الجائزه -300 XP*`);
+      m.reply(`*☠️ النت الخاسر! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
-  } else if (text == 'tijera') {
-    if (astro == 'papel') {
+  } else if (textm == 'مقص') {
+    if (astro == 'ورقه') {
       global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
+      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
+      m.reply(`*☠️ انت الخاسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
-  } else if (textm == 'tijera') {
-    if (astro == 'papel') {
-      global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
-    } else {
-      global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ Premio -300 XP*`);
-    }
-  } else if (textm == 'papel') {
-    if (astro == 'piedra') {
+  } else if (textm == 'ورقه') {
+    if (astro == 'حجر') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
       m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ Premio -300 XP*`);
     }
-  } else if (textm == 'piedra') {
-    if (astro == 'tijera') {
+  } else if (textm == 'ورقه') {
+    if (astro == 'مقص') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
     } else {
@@ -65,5 +65,5 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
 };
 handler.help = ['ppt'];
 handler.tags = ['games'];
-handler.command = /^(ppt)$/i;
+handler.command = /^(حجر)$/i;
 export default handler;
