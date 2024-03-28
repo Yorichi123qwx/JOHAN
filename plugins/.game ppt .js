@@ -6,35 +6,35 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   const time = global.db.data.users[m.sender].wait + 10000;
   if (new Date - global.db.data.users[m.sender].wait < 10000) throw `*🕓 Tendrás que esperar ${Math.floor((time - new Date()) / 1000)} segundos antes de poder volver a jugar*`;
 
-  if (!args[0]) return conn.reply(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉ 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} piedra*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} tijera*`, m);
-  // conn.sendButton(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉  𝙿𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚕𝚘𝚜 𝚋𝚘𝚝𝚘𝚗𝚎𝚜 𝚙𝚊𝚛𝚊 𝚓𝚞𝚐𝚊𝚛 𝚘 𝚝𝚊𝚖𝚋𝚒𝚎𝚗 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} tijera*`, wm, pp, [['حجر 🗿', `${usedPrefix + command} حجر`], ['ورقه 📄', `${usedPrefix + command} papel`], ['مقص ✂️', `${usedPrefix + command} tijera`]], m)
+  if (!args[0]) return conn.reply(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉ 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, m);
+  // conn.sendButton(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉  يمكنك إستخدام هذه الأوامر 𝚙𝚊𝚛𝚊 𝚓𝚞𝚐𝚊𝚛 𝚘 𝚝𝚊𝚖𝚋𝚒𝚎𝚗 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, wm, pp, [['حجر 🗿', `${usedPrefix + command} حجر`], ['ورقه 📄', `${usedPrefix + command} ورقه`], ['مقص ✂️', `${usedPrefix + command} مقص`]], m)
   let astro = Math.random();
   if (astro < 0.34) {
-    astro = 'piedra';
+    astro = 'حجر';
   } else if (astro > 0.34 && astro < 0.67) {
-    astro = 'tijera';
+    astro = 'مقص';
   } else {
-    astro = 'papel';
+    astro = 'ورقه';
   }
   const textm = text.toLowerCase();
   if (textm == astro) {
     global.db.data.users[m.sender].exp += 500;
-    m.reply(`*🔰 Empate!*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 Premio +500 XP*`);
-  } else if (text == 'papel') {
-    if (astro == 'piedra') {
+    m.reply(`*🔰 Empate!*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +500 XP*`);
+  } else if (text == 'ورقه') {
+    if (astro == 'حجر') {
       global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
+      m.reply(`*🥳 انت الفائز! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ Premio -300 XP*`);
+      m.reply(`*☠️ انت خسرت! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
   } else if (text == 'tijera') {
     if (astro == 'papel') {
       global.db.data.users[m.sender].exp += 1000;
-      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*🎁 Premio +1000 XP*`);
+      m.reply(`*🥳 Tú ganas! 🎉*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 الجائزه +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
-      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 El Bot: ${astro}*\n*❌ Premio -300 XP*`);
+      m.reply(`*☠️ Tú pierdes! ❌*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ الجائزه -300 XP*`);
     }
   } else if (textm == 'tijera') {
     if (astro == 'papel') {
