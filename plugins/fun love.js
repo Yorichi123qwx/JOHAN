@@ -25,7 +25,7 @@ const handler = async (m, { conn, command, text }) => {
     "El tiempo puede revelar cosas sorprendentes. ¡Sigamos explorando juntos!",
     "La vida está llena de giros inesperados. ¡Permanezcan abiertos a las posibilidades!",
   ];
-  const loveDescription = isHighLove ? "tienen una conexión profunda y un amor" : "لديهم إتصال خاص, aunque en el amor su porcentaje es";
+  const loveDescription = isHighLove ? "tienen una conexión profunda y un amor" : "لديهم إتصال خاص, على الرغم من أن نسبة الحب لديهم";
   const getRandomMessage = (messages) => messages[Math.floor(Math.random() * messages.length)];
   const loveMessage = isHighLove ? getRandomMessage(loveMessages) : getRandomMessage(notSoHighLoveMessages);
   const response =
