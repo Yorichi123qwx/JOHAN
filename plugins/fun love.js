@@ -29,10 +29,10 @@ const handler = async (m, { conn, command, text }) => {
   const getRandomMessage = (messages) => messages[Math.floor(Math.random() * messages.length)];
   const loveMessage = isHighLove ? getRandomMessage(loveMessages) : getRandomMessage(notSoHighLoveMessages);
   const response =
-    `━━━━━━━⬣ *LOVE* ⬣━━━━━━━\n` +
-    `*❥ En el universo del amor, ${text} y @${m.sender.split('@')[0]} ${loveDescription} del ${lovePercentage}% de un 100%*\n\n` +
+    `━━━━━━━⬣ *الحب* ⬣━━━━━━━\n` +
+    `*❥ في عالم الحب, ${text} و @${m.sender.split('@')[0]} ${نسبة الحب} del ${اتصال خاص}% de un 100%*\n\n` +
     `*❥ ${loveMessage}*\n` +
-    `━━━━━━━⬣ *LOVE* ⬣━━━━━━━`    
+    `━━━━━━━⬣ *الحب* ⬣━━━━━━━`    
   
   async function loading() {
 var hawemod = [
