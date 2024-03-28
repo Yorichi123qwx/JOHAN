@@ -7,7 +7,7 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   if (new Date - global.db.data.users[m.sender].wait < 10000) throw `*🕓 Tendrás que esperar ${Math.floor((time - new Date()) / 1000)} segundos antes de poder volver a jugar*`;
 
   if (!args[0]) return conn.reply(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉ 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, m);
-  // conn.sendButton(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉  يمكنك إستخدام هذه الأوامر 𝚙𝚊𝚛𝚊 𝚓𝚞𝚐𝚊𝚛 𝚘 𝚝𝚊𝚖𝚋𝚒𝚎𝚗 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, wm, pp, [['حجر 🗿', `${usedPrefix + command} حجر`], ['ورقه 📄', `${usedPrefix + command} ورقه`], ['مقص ✂️', `${usedPrefix + command} مقص`]], m)
+  // conn.sendButton(m.chat, `*حجر 🗿, ورقه 📄 𝐨 مقص ✂️*\n\n*—◉  يمكنك إستخدام هذه الأوامر 𝚙𝚊𝚛𝚊 𝚓𝚞𝚐𝚊𝚛 𝚘 𝚝𝚊𝚖𝚋𝚒𝚎𝚗 𝚙𝚞𝚎𝚍𝚎𝚜 يمكنك إستخدام الأوامر:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقه*\n*◉ ${usedPrefix + command} مقص*`, wm, pp, [['حجر 🗿', `${usedPrefix + command} حجر`], ['ورقه 📄', `${usedPrefix + command} ورقه`], ['مقص ✂️', `${usedPrefix + command} مقص`]], m)
   let astro = Math.random();
   if (astro < 0.34) {
     astro = 'حجر';
