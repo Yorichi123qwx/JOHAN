@@ -14,23 +14,23 @@ const handler = async (m, { conn, command, text }) => {
     "El amor verdadero a menudo requiere tiempo y esfuerzo. ¡No renuncien!",
   ];
   const notSoHighLoveMessages = [
-    "A veces, la amistad es el comienzo de algo hermoso, pero no siempre se convierte en amor.",
-    "El amor no es todo, ¡la amistad también es genial! Mantengan su amistad especial.",
-    "Recuerda que las mejores relaciones comienzan con una buena amistad. ¡No subestimen su vínculo!",
-    "A veces, el amor puede crecer con el tiempo. ¡Sigan fortaleciendo su conexión!",
-    "La vida es una sorpresa, ¡quién sabe qué depara el futuro! No pierdan la esperanza.",
-    "Aunque el amor no florezca como esperaban, su conexión sigue siendo valiosa.",
-    "Los corazones pueden tardar en sincronizarse, pero eso no disminuye lo especial que son juntos.",
-    "A pesar de los desafíos del amor, su amistad es un regalo que merece ser celebrado.",
-    "El tiempo puede revelar cosas sorprendentes. ¡Sigamos explorando juntos!",
-    "La vida está llena de giros inesperados. ¡Permanezcan abiertos a las posibilidades!",
+    "مع الحياة، الصديق هو كومينزو من شيء جميل، ولكن لا يبقى على حاله أن يتحول إلى حب.",
+    "الحب ليس كل شئ،بل الصداقه أيضا شئ خاص ومن الصداقه تبدأ قصة الحب.",
+    لقد علمت أن أفضل العلاقات كانت مع صديق جيد،، لا تقلل من شرب القهوه مع صديق!",
+    "مع الحياه يمكن خلق الحب مع الوقت!",
+    "الحب هو شعور صادق يصدر من القلب بدايته صداقه ونهايته محبه .",
+    "لا تقلل أبدا من شأن المحب ف حبه يصدر من قلبه .",
+    "قد تكسب في يوم ما شخصا يعادل ما خسرته في حياتك كلها.",
+    "جميل أن تكون شيئا ثمينا لدى شخص يخاف فقدانك.",
+    "أروع القلوب قلبك وأجمل الكلام همسك وأحلى ما في حياتي حبك",
+    "دمت لي شيئا جميلا لا يتنهي!",
   ];
   const loveDescription = isHighLove ? "tienen una conexión profunda y un amor" : "لديهم إتصال خاص, على الرغم من أن نسبة الحب لديهم";
   const getRandomMessage = (messages) => messages[Math.floor(Math.random() * messages.length)];
   const loveMessage = isHighLove ? getRandomMessage(loveMessages) : getRandomMessage(notSoHighLoveMessages);
   const response =
     `━━━━━━━⬣ *الحب* ⬣━━━━━━━\n` +
-    `*❥ في عالم الحب, ${text} y @${m.sender.split('@')[0]} ${loveDescription} del ${lovePercentage}% هي 100%*\n\n` +
+    `*❥ في عالم الحب, ${text} و @${m.sender.split('@')[0]} ${loveDescription} من ${lovePercentage}% هي 100%*\n\n` +
     `*❥ ${loveMessage}*\n` +
     `━━━━━━━⬣ *حب* ⬣━━━━━━━`    
   
