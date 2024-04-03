@@ -17,7 +17,7 @@ global.suittag = ['01008592761', '01008592761'];
 global.prems = ['01008592761', '01008592761'];
 
 global.packname = 'yorichi🔥 ';
-global.KMA = 'يوريتشي'
+global.KMA = 'YORICHI BOT🔥'
 global.author = 'yorichi🔥';
 global.wm = 'yorichi BOT🔥';
 global.titulowm = ' Yorichi ';
