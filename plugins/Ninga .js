@@ -36,6 +36,6 @@ function handler(m, { text }) {
 }
 handler.help = ['namaninja'].map(v => v + ' <النص>')
 handler.tags = ['مرح']
-handler.command = /^(namaninja|namae|اسمنينجا)$/i
+handler.command = /^(namaninja|namae|اسم نينجا)$/i
 
 export default handler
