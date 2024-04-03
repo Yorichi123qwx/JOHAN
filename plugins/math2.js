@@ -1,7 +1,7 @@
 global.math = global.math ? global.math : {};
 const handler = async (m, {conn, args, usedPrefix, command}) => {
   const mat =`
-*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙻𝙰 𝙳𝙸𝙵𝙸𝙲𝚄𝙻𝚃𝙰𝙳𝙾 𝙲𝙾𝙽 𝙻𝙰 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙰 𝙹𝚄𝙶𝙰𝚁*
+*[❗خطأ❗] تستخدم الأمر بطريقه غير صحيحه*
 
 *𝙳𝙸𝙵𝙸𝙲𝚄𝙻𝚃𝙰𝙳𝙴𝚂 𝙳𝙸𝚂𝙿𝙾𝙽𝙸𝙱𝙻𝙴𝚂: ${Object.keys(modes).join(' | ')}*
 *𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾: ${usedPrefix}mates medium*
