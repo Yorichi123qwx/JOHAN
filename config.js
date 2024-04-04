@@ -20,9 +20,9 @@ global.packname = 'yorichi🔥 ';
 global.KMA = 'YORICHI BOT🔥'
 global.author = 'yorichi🔥';
 global.wm = 'yorichi BOT🔥';
-global.titulowm = ' Yorichi ';
-global.titulowm2 = ` Yorichi `
-global.igfg = ' Yorichi ';
+global.titulowm = ' Yorichi🔥 ';
+global.titulowm2 = ` Yorichi🔥 `
+global.igfg = ' Yorichi🔥 ';
 global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
