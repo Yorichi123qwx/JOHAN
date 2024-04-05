@@ -25,16 +25,7 @@ let handler = m => m;
      ]; 
    }else if (/^ المطور$/i.test(m.text)) { 
      responses = [ 
-'*↓┅↓〘 ⚠️ الـمـطـور ⚠️ 〙↓┅↓
-
-➽𝑌𝑂𝑅𝐼𝐶𝐻𝐼
-                                            https://wa.me/qr/LKEFOWKMJFVXJ1
-➽💌 Owner Of bot
-_*هذا رقم مطوري اذ كنت تريده*_
-
-_*الرجاء عدم الإزعاج*_
-
-*╰═┅ৡৢ͜͡✦═╡ 𝒀𝑶𝑹𝑰𝑪𝑯𝑰 𝑩𝑶𝑻╞═┅ৡৢ͜͡✦═╯*  *'
+'*رقم المطور بنفس رقم البوت*'
    ]; 
    }else if (/^تحبني|بوت $/i.test(m.text)) { 
      responses = [ 
